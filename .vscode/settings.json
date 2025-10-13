@@ -51,7 +51,7 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "jeu survie.sln",
+    "dotnet.defaultSolution": "jeu-survie-unity.sln",
     "editor.inlineSuggest.edits.allowCodeShifting": "never",
     "editor.inlineSuggest.edits.renderSideBySide": "never",
     "github.copilot.nextEditSuggestions.fixes": false,
