@@ -6,8 +6,13 @@ using UnityEngine.UI;
 
 public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    //Référence à l'item dans le slot
     public ItemData item;
+
+    //Référence à l'image de l'item
     public Image itemVisual;
+
+    //Méthode pour afficher la description de l'item au survol
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (item != null)
@@ -15,8 +20,22 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             ToolTipSystem.instance.Show(item.description, item.name);
         }
     }
+
+    //Méthode pour cacher la description de l'item quand la souris quitte le slot
     public void OnPointerExit(PointerEventData eventData)
     {
         ToolTipSystem.instance.Hide();
+    }
+
+    //Méthode pour gérer le clic sur le slot d'item
+    public void CilckOnItemSlot()
+    {
+        Inventory.instance.OpenItemActionPanel(item, transform.position);
+    }
+
+    //Méthode pour gérer le clic sur le slot d'équipement
+    public void ClickOnEquipmentSlot()
+    {
+        Inventory.instance.OpenEquipmentActionPanel(item, transform.position);
     }
 }

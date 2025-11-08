@@ -16,6 +16,7 @@ public class PickupBehavior : MonoBehaviour
     [SerializeField]
     private Inventory inventory;
 
+    //Référence à l'item courant ramassé
     private Item currentItem;
 
     //Fonction de ramassage d'un item
@@ -33,11 +34,12 @@ public class PickupBehavior : MonoBehaviour
         playerAnimator.SetTrigger("Pickup");
         //bloquer déplacement du joueur pendant l'animation
         playerMoveBehaviour.canMove = false;
-        
+
         //message pour débuguer
         Debug.Log("Pickup action performed");
     }
 
+    //Méthode pour ajouter l'item à l'inventaire (appelée par un event dans l'animation)
     public void AddItemToInventory()
     {
         //Ajouter objets ramassés à l'inventaire
@@ -48,6 +50,7 @@ public class PickupBehavior : MonoBehaviour
         currentItem = null;
     }
    
+    //Méthode pour réactiver le déplacement du joueur (appelée par un event dans l'animation)
    public void ReEnablePlayerMovement()
    {
         //réactiver le déplacement du joueur

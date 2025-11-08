@@ -8,16 +8,21 @@ public class PickupItem : MonoBehaviour
     [SerializeField]
     private float pickupRange = 2.6f;
 
+    //Référence au script comportment de ramassage
     public PickupBehavior playerPickupBehavior;
 
+    //LayerMask pour ne détecter que les items
     [SerializeField]
     private LayerMask layerMask;
 
+    //Référence au texte d'instruction de ramassage
     [SerializeField]
     private GameObject pickupText;
 
+    //Compteur pour afficher le texte une seule fois
     private int cpt;
 
+    // Start is called before the first frame update
     void Start()
     {
         cpt = 0;

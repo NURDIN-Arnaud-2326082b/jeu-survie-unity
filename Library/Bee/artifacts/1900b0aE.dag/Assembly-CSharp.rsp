@@ -360,6 +360,7 @@
 "Assets/Character/Scripts/FlyBehaviour.cs"
 "Assets/Character/Scripts/MoveBehaviour.cs"
 "Assets/Character/Scripts/ThirdPersonOrbitCamBasic.cs"
+"Assets/Scripts/EquipmentLibrary.cs"
 "Assets/Scripts/Inventory.cs"
 "Assets/Scripts/Item.cs"
 "Assets/Scripts/ItemData.cs"
