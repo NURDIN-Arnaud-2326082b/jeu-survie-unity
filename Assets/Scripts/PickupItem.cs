@@ -31,6 +31,7 @@ public class PickupItem : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, pickupRange, layerMask))
         {
+            Debug.Log("Raycast hit: " + hit.transform.name);
             //On vérifie que l'objet est bien tagué "Item"
             if (hit.transform.CompareTag("Item"))
             {

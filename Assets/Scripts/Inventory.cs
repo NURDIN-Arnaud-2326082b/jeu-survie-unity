@@ -53,7 +53,9 @@ public class Inventory : MonoBehaviour
         //rafraîchir le contenu de l'inventaire
         for (int i = 0; i < content.Count; i++)
         {
-            inventorySlotsParent.GetChild(i).GetChild(0).GetComponent<UnityEngine.UI.Image>().sprite = content[i].visual;
+            Slot currentSlot = inventorySlotsParent.GetChild(i).GetComponent<Slot>();
+            currentSlot.item = content[i];
+            currentSlot.itemVisual.sprite = content[i].visual;
         }
     }
     

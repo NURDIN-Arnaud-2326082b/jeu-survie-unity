@@ -365,6 +365,9 @@
 "Assets/Scripts/ItemData.cs"
 "Assets/Scripts/PickupBehavior.cs"
 "Assets/Scripts/PickupItem.cs"
+"Assets/Scripts/Slot.cs"
+"Assets/Scripts/ToolTip.cs"
+"Assets/Scripts/ToolTipSystem.cs"
 -langversion:9.0
 /deterministic
 /optimize+

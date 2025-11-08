@@ -8,4 +8,6 @@ public class ItemData : ScriptableObject
     public string name;
     public Sprite visual;
     public GameObject prefab;
+
+    public string description;
 }
