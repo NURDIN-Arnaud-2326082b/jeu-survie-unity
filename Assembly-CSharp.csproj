@@ -59,25 +59,36 @@
     <UnityVersion>2022.3.36f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Users\legee\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.1.3\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Users\legee\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.2.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.36f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.36f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Character\Scripts\MoveBehaviour.cs" />
+    <Compile Include="Assets\Scripts\AttackBehavior.cs" />
+    <Compile Include="Assets\Scripts\RecipeData.cs" />
     <Compile Include="Assets\Scripts\Slot.cs" />
     <Compile Include="Assets\Scripts\ToolTipSystem.cs" />
+    <Compile Include="Assets\Scripts\ElementRequired.cs" />
     <Compile Include="Assets\Character\Scripts\FlyBehaviour.cs" />
-    <Compile Include="Assets\Scripts\PickupItem.cs" />
+    <Compile Include="Assets\Scripts\Harvestable.cs" />
     <Compile Include="Assets\Scripts\Inventory.cs" />
     <Compile Include="Assets\Character\Scripts\ThirdPersonOrbitCamBasic.cs" />
     <Compile Include="Assets\Scripts\ItemData.cs" />
-    <Compile Include="Assets\Scripts\PickupBehavior.cs" />
+    <Compile Include="Assets\Scripts\EnemyAI.cs" />
+    <Compile Include="Assets\Scripts\Interact.cs" />
+    <Compile Include="Assets\Scripts\Equipment.cs" />
+    <Compile Include="Assets\Scripts\InteractBehavior.cs" />
     <Compile Include="Assets\Scripts\EquipmentLibrary.cs" />
     <Compile Include="Assets\Character\Scripts\BasicBehaviour.cs" />
+    <Compile Include="Assets\Scripts\CraftingSystem.cs" />
+    <Compile Include="Assets\Scripts\ItemActionsSystem.cs" />
     <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\ToolTip.cs" />
+    <Compile Include="Assets\Scripts\UIManager.cs" />
+    <Compile Include="Assets\Scripts\PlayerStats.cs" />
     <Compile Include="Assets\Character\Scripts\AimBehaviourBasic.cs" />
+    <Compile Include="Assets\Scripts\Recipe.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -952,6 +963,14 @@
       <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.AI.Navigation">
+      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.AI.Navigation.Updater">
+      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Updater.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
       <Private>False</Private>
@@ -996,8 +1015,16 @@
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.AI.Navigation.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
+      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">

@@ -12,6 +12,16 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     //Référence à l'image de l'item
     public Image itemVisual;
 
+    //Référence au système d'équipements
+    [SerializeField]
+    private Equipment equipment;
+
+    //Référence au système d'actions d'item
+    [SerializeField]
+    private ItemActionsSystem itemActionsSystem;
+
+    public Text countText;
+
     //Méthode pour afficher la description de l'item au survol
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -30,12 +40,12 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     //Méthode pour gérer le clic sur le slot d'item
     public void CilckOnItemSlot()
     {
-        Inventory.instance.OpenItemActionPanel(item, transform.position);
+        itemActionsSystem.OpenItemActionPanel(item, transform.position);
     }
 
     //Méthode pour gérer le clic sur le slot d'équipement
     public void ClickOnEquipmentSlot()
     {
-        Inventory.instance.OpenEquipmentActionPanel(item, transform.position);
+        equipment.OpenEquipmentActionPanel(item, transform.position);
     }
 }
